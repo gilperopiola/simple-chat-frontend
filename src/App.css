@@ -1,5 +1,8 @@
+@import '~antd/dist/antd.css';
+
 .App {
   text-align: center;
+  background-color: #5461fb;
 }
 
 .App-logo {
