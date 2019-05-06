@@ -25,5 +25,10 @@ export default {
     sendMessageToRoom(id, message) {
         axios.defaults.headers.common['Authorization'] = localStorage.getItem('token');
         return axios.post(URL_BASE + '/room/' + id, message, {});
+    },
+
+    sendCommand(command) {
+        axios.defaults.headers.common['Authorization'] = localStorage.getItem('token');
+        return axios.post(URL_BASE + '/command', command, {});
     }
 };

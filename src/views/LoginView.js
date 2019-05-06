@@ -26,7 +26,9 @@ class LoginView extends React.Component {
 
             window.location.assign('/chat');
         }).catch((error) => {
-            alert(error.response.data);
+            if (error.response.data) {
+                alert(error.response.data);
+            }
         });
     }
 
@@ -71,7 +73,9 @@ class LoginView extends React.Component {
                         </Button>
                     </Form.Item>
                 </Form>
-
+                <p style={{ color: "#d0d0d0" }}>Seeded users have the username format 'test_username_n'</p>
+                <p style={{ color: "#d0d0d0" }}>Seeded users have the password 'password'</p>
+                <p style={{ color: "white" }}>Code can be found on https://github.com/gilperopiola/simple-chat-backend and https://github.com/gilperopiola/simple-chat-frontend</p>
             </Content>
         )
     }
